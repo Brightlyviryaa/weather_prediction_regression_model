@@ -4,6 +4,17 @@
 
 This project aims to preprocess a historical weather dataset (`weatherHistory.csv`) for machine learning model development. The dataset contains various meteorological features, including temperature, humidity, wind speed, and visibility, among others. The goal is to prepare the data for training and testing a weather prediction model, with 10% of the latest data used for testing.
 
+## Team members
+
+This is our team member dedicated to work on this project.
+
+| Nama               | NIM          |
+| ------------------ | ------------ |
+| Brightly Virya     | 00000068227  |
+| Batara Hotdo       | 000000111111 |
+| Daniel             | 000000111111 |
+| Christopher Alvaro | 000000111111 |
+
 ## Dataset
 
 The dataset used in this project is `weatherHistory.csv`, which includes the following columns:
@@ -31,16 +42,10 @@ This project includes the following features:
 
 ## Model
 
-The model is intended to predict the **Temperature (C)** based on other meteorological features. Specifically:
+The model is intended to predict the **Percip type** based on other meteorological features. Specifically:
 
-- **X (Features)**: The input features used for the prediction model will be the following columns:
-  - `Apparent Temperature (C)`
-  - `Humidity`
-  - `Wind Speed (km/h)`
-  - `Wind Bearing (degrees)`
-  - `Visibility (km)`
-  - `Pressure (millibars)`
-- **y (Target)**: The target variable to be predicted is the `Temperature (C)` column.
+- **X (Features)**: The input features used for the prediction model will be the following columns: `Humidity`
+- **y (Target)**: The target variable to be predicted is the `Percip type` column.
 - **Prediction**: The model aims to predict the actual temperature based on other features in the dataset.
 
 ## Requirements
