@@ -29,16 +29,31 @@ This project includes the following features:
 - **Data splitting**: Split the dataset into training and testing sets, with the latest 10% of the data used for testing.
 - **Category identification**: Extract and display the unique categories present in the `Summary` and `Precip Type` columns.
 
+## Model
+
+The model is intended to predict the **Temperature (C)** based on other meteorological features. Specifically:
+
+- **X (Features)**: The input features used for the prediction model will be the following columns:
+  - `Apparent Temperature (C)`
+  - `Humidity`
+  - `Wind Speed (km/h)`
+  - `Wind Bearing (degrees)`
+  - `Visibility (km)`
+  - `Pressure (millibars)`
+- **y (Target)**: The target variable to be predicted is the `Temperature (C)` column.
+- **Prediction**: The model aims to predict the actual temperature based on other features in the dataset.
+
 ## Requirements
 
 To run the code in this project, you need to have the following dependencies installed:
 
 - Python 3.x
 - Pandas (for data manipulation)
-- Scikit-learn (for potential model development)
+- Scikit-learn (for model development)
+- Jupyter Notebook (for interactive data analysis)
 
 You can install the required Python libraries using `pip`:
 
 ```bash
-pip install pandas scikit-learn
+pip install pandas scikit-learn jupyter
 ```
