@@ -11,7 +11,7 @@ This is our team member dedicated to work on this project.
 | Nama               | NIM          |
 | ------------------ | ------------ |
 | Brightly Virya     | 00000068227  |
-| Batara Hotdo       | 000000111111 |
+| Batara Hotdo Horas Simbolon | 00000078626 |
 | Daniel             | 000000111111 |
 | Christopher Alvaro | 000000111111 |
 
