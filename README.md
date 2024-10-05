@@ -13,7 +13,7 @@ This is our team member dedicated to work on this project.
 | Brightly Virya     | 00000068227  |
 | Batara Hotdo Horas Simbolon | 00000078626 |
 | Daniel             | 000000111111 |
-| Christopher Alvaro | 000000111111 |
+| Christopher Alvaro | 00000073214 |
 
 ## Dataset
 
