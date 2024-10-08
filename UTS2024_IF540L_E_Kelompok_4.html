@@ -7528,13 +7528,32 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h3 id="Kelompok---%5Bisi-nomor-kelompok%5D">Kelompok - [isi nomor kelompok]<a class="anchor-link" href="#Kelompok---%5Bisi-nomor-kelompok%5D">¶</a></h3><h4 id="Anggota-Kelompok-:">Anggota Kelompok :<a class="anchor-link" href="#Anggota-Kelompok-:">¶</a></h4><ol>
-<li>Brightly Virya</li>
-<li>Batara Hotdo Horas Simbolon</li>
-<li>Daniel</li>
-<li>Christopher Alvaro
-...</li>
-</ol>
+<h3 id="Kelompok---4">Kelompok - 4<a class="anchor-link" href="#Kelompok---4">¶</a></h3><h4 id="Anggota-Kelompok-:">Anggota Kelompok :<a class="anchor-link" href="#Anggota-Kelompok-:">¶</a></h4><table>
+<thead>
+<tr>
+<th>Nama</th>
+<th>NIM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brightly Virya</td>
+<td>00000068227</td>
+</tr>
+<tr>
+<td>Batara Hotdo Horas Simbolon</td>
+<td>00000078626</td>
+</tr>
+<tr>
+<td>Daniel Isaach Hatuaon Siregar</td>
+<td>00000078609</td>
+</tr>
+<tr>
+<td>Christopher Alvaro</td>
+<td>00000073214</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -8408,6 +8427,7 @@ Name: Precip Type, Length: 96453, dtype: int64
 <li>Ini memastikan semua fitur memberikan kontribusi yang setara pada model, sehingga fitur dengan skala yang lebih besar tidak mendominasi.</li>
 <li>X_standar = (X - mean) / std_dev</li>
 <li>Di mana 'mean' adalah rata-rata dari fitur dan 'std_dev' adalah standar deviasi dari fitur.</li>
+<li>StandardScaler digunakan untuk menstandarisasi fitur-fitur dalam dataset dengan mengubahnya sehingga memiliki rata-rata (mean) 0 dan standar deviasi (std) 1. Ini dilakukan agar semua fitur berada pada skala yang setara dan tidak ada satu fitur yang mendominasi model hanya karena skala nilainya yang lebih besar.</li>
 </ul>
 </div>
 </div>
@@ -8724,7 +8744,7 @@ Name: Precip Type, dtype: int64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [64]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [76]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">processed_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Precip Type'</span><span class="p">])</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -8751,7 +8771,7 @@ Name: Precip Type, dtype: int64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [77]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Your codes are here (replace the following codes)</span>
@@ -8767,7 +8787,7 @@ Name: Precip Type, dtype: int64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [63]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [78]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span><span class="s2">"./UTS2024_IF540L_E_Kelompok_4.ipynb"</span><span class="w"> </span>--output-dir<span class="o">=</span><span class="s2">"./"</span>
@@ -8784,7 +8804,7 @@ Name: Precip Type, dtype: int64
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>[NbConvertApp] Converting notebook ./UTS2024_IF540L_E_Kelompok_4.ipynb to html
-[NbConvertApp] Writing 314787 bytes to UTS2024_IF540L_E_Kelompok_4.html
+[NbConvertApp] Writing 323891 bytes to UTS2024_IF540L_E_Kelompok_4.html
 </pre>
 </div>
 </div>
