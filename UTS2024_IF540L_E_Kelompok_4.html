@@ -9284,6 +9284,17 @@ Name: Precip Type, Length: 96453, dtype: int64
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1766e6bd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Balancing">Balancing<a class="anchor-link" href="#Balancing">¶</a></h1><h3 id="Menggabungkan-kembali-fitur-dan-target-untuk-melakukan-balancing">Menggabungkan kembali fitur dan target untuk melakukan balancing<a class="anchor-link" href="#Menggabungkan-kembali-fitur-dan-target-untuk-melakukan-balancing">¶</a></h3>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=02c8604c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9294,24 +9305,111 @@ Name: Precip Type, Length: 96453, dtype: int64
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.utils</span> <span class="kn">import</span> <span class="n">resample</span>
 
-<span class="c1"># Menggabungkan kembali fitur dan target untuk melakukan balancing</span>
 <span class="n">df_balanced</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="c1"># Memisahkan kembali data berdasarkan kelas target</span>
-<span class="n">df_majority</span> <span class="o">=</span> <span class="n">df_balanced</span><span class="p">[</span><span class="n">df_balanced</span><span class="p">[</span><span class="s1">'Precip Type'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d43a5d5e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Memisahkan-kembali-data-berdasarkan-kelas-target">Memisahkan kembali data berdasarkan kelas target<a class="anchor-link" href="#Memisahkan-kembali-data-berdasarkan-kelas-target">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=76fe5d20">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df_majority</span> <span class="o">=</span> <span class="n">df_balanced</span><span class="p">[</span><span class="n">df_balanced</span><span class="p">[</span><span class="s1">'Precip Type'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
 <span class="n">df_minority</span> <span class="o">=</span> <span class="n">df_balanced</span><span class="p">[</span><span class="n">df_balanced</span><span class="p">[</span><span class="s1">'Precip Type'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
-
-<span class="c1"># Melakukan oversampling pada kelas minoritas</span>
-<span class="n">df_minority_upsampled</span> <span class="o">=</span> <span class="n">resample</span><span class="p">(</span><span class="n">df_minority</span><span class="p">,</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cfc8443c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Melakukan-oversampling-pada-kelas-minoritas">Melakukan oversampling pada kelas minoritas<a class="anchor-link" href="#Melakukan-oversampling-pada-kelas-minoritas">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=af6f6654">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df_minority_upsampled</span> <span class="o">=</span> <span class="n">resample</span><span class="p">(</span><span class="n">df_minority</span><span class="p">,</span> 
                                  <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>    <span class="c1"># Mengambil sampel dengan penggantian</span>
                                  <span class="n">n_samples</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_majority</span><span class="p">),</span>  <span class="c1"># Menyamakan jumlah dengan kelas mayoritas</span>
                                  <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>  <span class="c1"># Untuk reproduktivitas</span>
-
-<span class="c1"># Menggabungkan kembali kelas mayoritas dengan kelas minoritas yang sudah di-oversample</span>
-<span class="n">df_balanced</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_majority</span><span class="p">,</span> <span class="n">df_minority_upsampled</span><span class="p">])</span>
-
-<span class="c1"># Memisahkan kembali fitur dan variabel target setelah balancing</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">df_balanced</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Precip Type'</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bd1353b5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Menggabungkan-kembali-kelas-mayoritas-dengan-kelas-minoritas-yang-sudah-di-oversample">Menggabungkan kembali kelas mayoritas dengan kelas minoritas yang sudah di-oversample<a class="anchor-link" href="#Menggabungkan-kembali-kelas-mayoritas-dengan-kelas-minoritas-yang-sudah-di-oversample">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ebd775ae">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df_balanced</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_majority</span><span class="p">,</span> <span class="n">df_minority_upsampled</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=91692c0d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Memisahkan-kembali-fitur-dan-variabel-target-setelah-balancing">Memisahkan kembali fitur dan variabel target setelah balancing<a class="anchor-link" href="#Memisahkan-kembali-fitur-dan-variabel-target-setelah-balancing">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=886bc8b1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df_balanced</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Precip Type'</span><span class="p">])</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">df_balanced</span><span class="p">[</span><span class="s1">'Precip Type'</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -9740,7 +9838,7 @@ memory usage: 8.1 MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [247]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [270]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Your codes are here (replace the following codes)</span>
@@ -9756,7 +9854,7 @@ memory usage: 8.1 MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [248]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [271]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span><span class="s2">"./UTS2024_IF540L_E_Kelompok_4.ipynb"</span><span class="w"> </span>--output-dir<span class="o">=</span><span class="s2">"./"</span>
@@ -9774,7 +9872,7 @@ memory usage: 8.1 MB
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>[NbConvertApp] Converting notebook ./UTS2024_IF540L_E_Kelompok_4.ipynb to html
 [NbConvertApp] WARNING | Alternative text is missing on 2 image(s).
-[NbConvertApp] Writing 582459 bytes to UTS2024_IF540L_E_Kelompok_4.html
+[NbConvertApp] Writing 588571 bytes to UTS2024_IF540L_E_Kelompok_4.html
 </pre>
 </div>
 </div>
