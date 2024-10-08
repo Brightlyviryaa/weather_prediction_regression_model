@@ -8,12 +8,12 @@ This project aims to preprocess a historical weather dataset (`weatherHistory.cs
 
 This is our team member dedicated to work on this project.
 
-| Nama                            | NIM         |
-| ------------------------------- | ----------- |
-| Brightly Virya                  | 00000068227 |
-| Batara Hotdo Horas Simbolon     | 00000078626 |
-| Daniel Isaach Hatuaon Siregar   | 00000078609 |
-| Christopher Alvaro Maria Samola | 00000073214 |
+| Nama                          | NIM         |
+| ----------------------------- | ----------- |
+| Brightly Virya                | 00000068227 |
+| Batara Hotdo Horas Simbolon   | 00000078626 |
+| Daniel Isaach Hatuaon Siregar | 00000078609 |
+| Christopher Alvaro            | 00000073214 |
 
 ## Dataset
 
